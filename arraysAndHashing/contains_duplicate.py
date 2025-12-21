@@ -9,6 +9,8 @@ Create a list, loop through nums, if current number is in the list, return true,
 """
 
 class Solution(object):
+    
+    #solution 1
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
@@ -24,6 +26,23 @@ class Solution(object):
 
     # Time Complexity: O(n^2)
     # Space Complexity: O(n)
+
+
+    #solution 2
+    def containsDuplicate(self, nums):
+        seen = set()
+        for x in nums:
+            if x in seen:
+                return True
+            seen.add(x)
+            return False
+        
+        # Time Complexity: O(n) -> sets have avg look up of O(1)
+        # Time Complexity: O(n)
+        
+
+
+    
 
 
 
